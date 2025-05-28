@@ -80,11 +80,21 @@ class DataHubGlossaryImporter:
                                              )
 
     def add_business_glossary_assets(self):
-        utils.add_link_to_dataset( dataset_name= "base_api.test15",
-                                   platform="mysql",
-                                   COLUMN_NAME="columnName2",
-                                   GLOSSARY_TERM= self.business_term.name,
-                                   instance="127.0.0.1,3306"
+        technical_dataset= self.business_term.technical_name.split('].[')
+        technical_dataset = [item.replace(']', '').replace('[', '')  for item in technical_dataset]
+
+        platform = technical_dataset[0]
+        instance = technical_dataset[1]
+        dataset_name = technical_dataset[2]
+        column_name = technical_dataset[3]
+
+
+        utils.add_link_to_dataset( 
+                                   platform=platform,
+                                   instance=instance,
+                                   dataset_name= dataset_name,
+                                   COLUMN_NAME=column_name,
+                                   GLOSSARY_TERM= self.business_term.name                                   
                                   )
  
 

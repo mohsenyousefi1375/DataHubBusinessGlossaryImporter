@@ -141,7 +141,7 @@ def add_owner_to_business_glossary(datahub_user_name:str, datahub_group_name:str
         owner_to_add = make_user_urn(datahub_user_name)
 
     elif datahub_group_name:
-        owner_to_add = make_user_urn(datahub_group_name)
+        owner_to_add = make_group_urn (datahub_group_name)
 
 
     ownership_type =ownership_type #OwnershipTypeClass.TECHNICAL_OWNER

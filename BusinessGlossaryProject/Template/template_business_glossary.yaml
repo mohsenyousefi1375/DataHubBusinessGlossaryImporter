@@ -1,18 +1,18 @@
-name: Driver5                              # mandatory - metric name
+name: Driver10                              # mandatory - metric name
 physical_address: operation.general                         # mandatory - folder_name
-technical_name: "[mysql].[127.0.0.1,3306].[base_api.test15].[columnName2]"                  # this is for technical use - mapping business term to ssas measures [platform].[instance].[dataset].[column_name]
+technical_name: "[mysql].[127.0.0.1,3306].[base_api.test15]"                  # this is for technical use - mapping business term to ssas measures [platform].[instance].[dataset].[column_name]
 description: An individual who is registered and authorized to accept and complete ride or delivery requests on Snapp platform.                      # mandatory
 synonyms: Customer, Biker                 # words that have the same or nearly the same meaning
-algorithms_supporting_definitions: none        # mathematical or descriptive alogrithems supports the term. 
-created_date: 2024-01-01                  # mandatory
-updated_date: 2025-01-01                  # mandatory
+algorithms_supporting_definitions: null        # mathematical or descriptive alogrithems supports the term. 
+created_date: "2024-01-01"                  # mandatory
+updated_date: "2025-01-01"                 # mandatory
 business_owner_group_name: Ops_team            # mandatory - The team who creates the metric
 business_owner_person_Email: ops@snapp.cab
 technical_owner: BITEAM                  # mandatory 
 domain: Operation                         # A specific area of business
-policies: none
-Common_misunderstandings: none
+policies: null
+Common_misunderstandings: null
 isDeprecated: false                     # mandatory
-Contained_by: none                         # has a relationship
-Inherited_by: none                       # is a relationship - parent
-tags: none
+Contained_by: null                         # has a relationship
+Inherited_by: null                       # is a relationship - parent
+tags: null

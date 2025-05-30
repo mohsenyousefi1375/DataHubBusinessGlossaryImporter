@@ -207,9 +207,7 @@ def add_link_to_dataset (dataset_name:str,platform:str ,COLUMN_NAME:str ,GLOSSAR
             GlossaryTermAssociationClass(
                 urn=glossary_term_urn,
                 actor=ACTOR_URN,
-                context= f'"fieldPath": "{COLUMN_NAME}"'
-                
-                ,  # use SchemaFieldKey
+                context= f'"fieldPath": "{COLUMN_NAME}"'  , 
                 attribution=None,
             )
         ],

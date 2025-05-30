@@ -82,11 +82,10 @@ class DataHubGlossaryImporter:
     def add_business_glossary_assets(self):
         technical_dataset= self.business_term.technical_name.split('].[')
         technical_dataset = [item.replace(']', '').replace('[', '')  for item in technical_dataset]
-
         platform = technical_dataset[0]
         instance = technical_dataset[1]
         dataset_name = technical_dataset[2]
-        column_name = technical_dataset[3]
+        column_name ="" #technical_dataset[3]
 
 
         utils.add_link_to_dataset( 

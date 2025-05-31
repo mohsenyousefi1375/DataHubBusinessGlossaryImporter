@@ -1,4 +1,4 @@
-name: Driver10                              # mandatory - metric name
+name: Driver11                              # mandatory - metric name
 physical_address: operation.general                         # mandatory - folder_name
 technical_name: "[mysql].[127.0.0.1,3306].[base_api.test15]"                  # this is for technical use - mapping business term to ssas measures [platform].[instance].[dataset].[column_name]
 description: An individual who is registered and authorized to accept and complete ride or delivery requests on Snapp platform.                      # mandatory

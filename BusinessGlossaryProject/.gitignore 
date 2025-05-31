@@ -1,0 +1,8 @@
+venv/
+env/
+.venv/
+.env/
+.env.*
+test.ipynb
+BusinessGlossaryProject/Source/test.ipynb
+BusinessGlossaryProject/.env

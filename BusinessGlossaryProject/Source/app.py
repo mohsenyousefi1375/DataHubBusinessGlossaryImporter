@@ -1,12 +1,12 @@
-from fastapi import FastAPI, HTTPException, status 
+from fastapi import FastAPI, HTTPException, status, Security
 from Model.BusinessGlossaryModel import BusinessGlossaryModel
 from Service.DataHubGlossaryImporter import DataHubGlossaryImporter
-
+from core.Security import verify_api_key
 
 my_app = FastAPI()
 
 @my_app.post("/")
-async def root(data: BusinessGlossaryModel, status_code: int = status.HTTP_201_CREATED):
+async def root(data: BusinessGlossaryModel, status_code: int = status.HTTP_201_CREATED, _=Security(verify_api_key)):
     #dataset = BusinessGlossaryModel(**data)
     try:
         importer  = DataHubGlossaryImporter(data)
